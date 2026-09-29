@@ -1,6 +1,7 @@
 RISC-V SoC-Based Single Fan Controller with PWM, SPI, and UART
 USTP Capstone Project — SystemVerilog RTL Design, UVM Verification, and FPGA Synthesis
 
+===============================================================================
 Table of Contents
 ===============================================================================
 1. Project Overview
@@ -14,6 +15,7 @@ Table of Contents
 9. Documentation
 
 
+===============================================================================
 1. Project Overview
 ===============================================================================
 This project implements a complete RISC-V RV32I System-on-Chip (SoC) designed 
@@ -51,6 +53,7 @@ FPGA Target:
 - Clock: 25 MHz (Timing closure achieved, worst-case Fmax ~32 MHz)
 
 
+===============================================================================
 2. Directory Structure
 ===============================================================================
 soc_project/                     <- Main project root directory
@@ -77,6 +80,7 @@ soc_project/                     <- Main project root directory
     |-- docs/                    <- Architecture, memory map, and timing logs
 
 
+===============================================================================
 3. Required Tools & Environment
 ===============================================================================
 - Simulation: Siemens EDA QuestaSim / ModelSim (v10.g or newer)
@@ -84,7 +88,7 @@ soc_project/                     <- Main project root directory
 - Utilities: Python 3.x (for helper scripts)
 
 
-
+===============================================================================
 4. How to Compile and Run Simulation
 ===============================================================================
 To compile the source code files and pull up the interactive simulation shell:
@@ -93,7 +97,7 @@ To compile the source code files and pull up the interactive simulation shell:
    vsim -do run_tb.do
 
 
-
+===============================================================================
 5. How to Run the Tests
 ===============================================================================
 To run individual UVM environment scenarios directly from your console:
@@ -105,7 +109,7 @@ For fault condition processing verification:
 vsim -c -do "do run_uvm.do +UVM_TESTNAME=uvm_error_test"
 
 
-
+===============================================================================
 6. How to Run Coverage
 ===============================================================================
 To merge test traces together and generate your local web-browser dashboard:
@@ -114,7 +118,7 @@ To merge test traces together and generate your local web-browser dashboard:
 2. Open 'soc_project/cov/html/index.html' in your browser to view the report.
 
 
-
+===============================================================================
 7. How to Run FPGA Synthesis (Quartus)
 ===============================================================================
 1. Launch the Intel Quartus Prime desktop suite.
@@ -122,11 +126,14 @@ To merge test traces together and generate your local web-browser dashboard:
 3. Click Processing -> Start Compilation to run synthesis, placing, and routing.
 
 
+===============================================================================
 8. How to Reproduce Reported Results
 ===============================================================================
 To run everything sequentially (compilation, all tests, regression, coverage):
 vsim -c -do run_regress.do
 
+
+===============================================================================
 9. Documentation
 ===============================================================================
 For specialized information, look inside the 'docs/' directory:
